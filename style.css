@@ -4,7 +4,7 @@
 
 :root
 {
-	--bkg-page: #ddd;
+	--bkg-page: #cfcfcf;
 	--text: #555;
 	--text-light: #fff;
 	--text-accent: #F86618;
@@ -173,7 +173,7 @@ p, ul, pre, label
 	font-family: body_font;
 	font-weight: normal;
 	font-size: 14px;
-	line-height: 1;
+	line-height: 1.2;
 	color: var(--text);
 	
 	padding: 0;
