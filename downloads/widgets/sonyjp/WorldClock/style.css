@@ -1,0 +1,61 @@
+/*
+ * Copyright 2008 Sony Electronics Inc.
+ */
+ 
+ body, html
+{
+    margin: 0;
+    padding: 0;
+}
+
+.analogclock
+{
+    background-image: url(images/back.png);
+    background-repeat: no-repeat;
+    height: 246px;
+    width: 246px;
+}
+
+.mhand
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index:25;
+}
+
+.hhand
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index:50;
+}
+
+
+.cap
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+}
+
+.location
+{
+    position: absolute;
+    top: 138px;
+    left: 0;
+    width: 246px;
+    text-align: center;
+    color: #BBBBBB;
+}
+
+.ampm
+{
+    position: absolute;
+    top: 180px;
+    left: 0;
+    width: 246px;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2008 Sony Electronics Inc. -->
+<widgetPackage xmlns="http://xmlns.sony.net/mylo/widget" version="1.0">
+  <info> 
+    <packageName>World Clock</packageName>
+    <author>Sony Electronics Inc.</author>
+    <abstract>A customizable World Clock. Copyright 2008 Sony Electronics Inc.</abstract>
+    <version>1.0</version>
+    <locale>US</locale>
+    <engine>1.0</engine>
+    <updateURL></updateURL>
+    <siteURL>http://www.sony.com/mylo/</siteURL>
+    <defHeight>21</defHeight>
+    <defWidth>21</defWidth>
+    <createDate>2008-02-08</createDate>
+  </info>
+</widgetPackage>

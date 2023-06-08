@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/style.css" type="text/css" />
+		<link rel="icon" sizes="16x16" href="/assets/favicon16.png" />
+		<link rel="icon" sizes="128x128" href="/assets/favicon128.png" />
+		<meta name="theme-color" content="#073B93" />
+		<meta name="viewport" content="width=1000" />
+		<style> td { vertical-align: top; } </style>
+		<title>widget development | mylo style</title>
+	</head>
+	
+	<body>
+		<div id="nav">
+			<p>
+				<a href="/">HOME</a> | 
+				<a href="/about/">ABOUT</a> | 
+				<a href="/downloads/">RESOURCES & DOWNLOADS</a> | 
+				<a href="/dev/">WIDGET DEVELOPMENT</a> | 
+				<a href="/links/">LINKS</a>
+			</p>
+		</div>
+		
+		<div id="main">
+			<p class="breadcrumb">&gt; <a href="/">home</a> &gt; <a href="/dev/">widget development</a> &gt;</p>
+			<h1>widgetpackage generator</h1>
+			<p>Fill out this form to generate the <b>widgetPackage.xml</b> file for your widget. Refer to <a href="../widget-description/">Describe Your Widget</a> for more info on this file.</p>
+			
+			<h2>widget information</h2>
+			<form>
+				<h3>widget info</h3>
+				<table>
+					<tr>
+						<td width="140px"><label for="packageName">Widget name:</label></td>
+						<td><input type="text" id="packageName" name="packageName" size="25" value="A Cool Widget">
+						<p>The name of your widget that's shown in the widget installer.</p></td>
+					</tr>
+					<tr>
+						<td><label for="abstract">Widget description:</label></td>
+						<td><input type="text" id="abstract" name="abstract" size="50" value="A really cool widget I've developed!">
+						<p>A short description of your widget.</p></td>
+					</tr>
+					<tr>
+						<td><label for="createDate">Widget creation date:</label></td>
+						<td><input type="date" id="createDate" name="createDate">
+						<p>The date that you created this version of the widget.</p></td>
+					</tr>
+					<tr>
+						<td><label for="version">Widget version:</label></td>
+						<td><input type="text" id="version" name="version" size="5" value="1.000">
+						<p>The current revision/version number of your widget.</p></td>
+					</tr>
+					<tr>
+						<td><label for="engine">Minimum OS version:</label></td>
+						<td><input type="text" id="engine" name="engine" size="5" value="1.000">
+						<p>The minimum OS version that the mylo must be running in order to install your widget. Specify 1.000 for full compatibility.</p></td>
+					</tr>
+					<tr>
+						<td><label for="locale">Locale:</label></td>
+						<td><input type="text" id="locale" name="locale" size="5" value="US">
+						<p>A 2-letter code denoting the language of your widget, such as US or JP.</p></td>
+					</tr>
+					<tr>
+						<td><label for="updateURL">Update URL:</label></td>
+						<td><input type="text" id="updateURL" name="updateURL" size="50" value="http://yoursite.com/coolwidget/widgetPackage.xml">
+						<p>The mylo will try to download the most recent widgetPackage.xml file for this widget from this URL when checking for updates. This may be left blank if you don't want to provide automatic updates.</p></td>
+					</tr>
+				</table>
+				
+				<h3>author info</h3>
+				<table>
+					<tr>
+						<td width="140px"><label for="author">Author's name:</label></td>
+						<td><input type="text" id="author" name="author" size="25" value="Your Name">
+						<p>The name of the author that's shown in the widget installer.</p></td>
+					</tr>
+					<tr>
+						<td><label for="siteURL">Author's website:</label></td>
+						<td><input type="text" id="siteURL" name="siteURL" size="50" value="http://yoursite.com/">
+						<p>When selecting "go to author's page" in the widget installer, this website URL will open.</p></td>
+					</tr>
+				</table>
+				
+				<h3>widget size</h3>
+				<p><i><b>Note:</b> These units are not pixels - 64 units is equal to the width of the mylo's screen.</i></p>
+				<table>
+					<tr>
+						<td width="140px"><label>Default widget size:</label></td>
+						<td>
+							<label for="defWidth">Width:</label>
+							<input type="text" id="defWidth" name="defWidth" size="2" value="32">
+							<label for="defHeight"> Height:</label>
+							<input type="text" id="defHeight" name="defHeight" size="2" value="25">
+						</td>
+					</tr>
+					<tr>
+						<td><label>Horizontal resizing:</label></td>
+						<td>
+							<input type="checkbox" id="widthResize" name="widthResize" onclick="widthResizeCheckbox()">
+							<label for="widthResize">Allow widget to be resized horizontally</label>
+						</td>
+						<td>
+							<label for="minWidth">Min width:</label>
+							<input type="text" id="minWidth" name="minWidth" size="2" value="20" disabled="true">
+							<label for="maxWidth">Max width:</label>
+							<input type="text" id="maxWidth" name="maxWidth" size="2" value="50" disabled="true">
+						</td>
+					</tr>
+					<tr>
+						<td><label>Vertical resizing:</label></td>
+						<td width="270px">
+							<input type="checkbox" id="heightResize" name="heightResize" onclick="heightResizeCheckbox()">
+							<label for="heightResize">Allow widget to be resized vertically</label>
+						</td>
+						<td>
+							<label for="minHeight">Min height: </label>
+							<input type="text" id="minHeight" name="minHeight" size="2" value="10" disabled="true">
+							<label for="maxHeight">Max height: </label>
+							<input type="text" id="maxHeight" name="maxHeight" size="2" value="32" disabled="true">
+						</td>
+					</tr>
+				</table>
+				<h3>finished?</h3>
+				<input type="button" value="Generate your file!" onclick="generateXML()">
+			</form>
+			
+			<div id="results" hidden>
+				<h2>widgetPackage.xml <a id="downloadlink" target="_blank" download="widgetPackage.xml">[download]</a></h2>
+				<pre id="xmlpreview"></pre>
+			</div>
+		</div>
+		
+		<script src="pkg.js"></script>
+	</body>
+</html>

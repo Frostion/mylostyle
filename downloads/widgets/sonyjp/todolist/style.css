@@ -1,0 +1,23 @@
+/*
+ * Copyright 2008 Sony Electronics Inc.
+ */
+body {
+	font-family:arial;
+	background-image:url(images/background.png);
+	background-repeat:no-repeat;
+	padding:0;
+	margin:0;
+	padding-left:2px;
+	padding-top:2px;
+}
+
+.style1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+
+#Completed {
+	width:20px;
+	height:20px;
+}

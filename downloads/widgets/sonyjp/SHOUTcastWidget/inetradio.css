@@ -1,0 +1,394 @@
+/*
+ * Copyright 2007,2008 Sony Corporation
+ */
+
+.widget_body{
+	padding : 0px 0px 0px 0px;
+	overflow : hidden;
+	background-color:transparent;
+}
+
+#LOGO{
+	position:absolute;
+	top:1px;
+	left:1px;
+	z-index:51;
+}
+
+#ANTENA_CLICK{
+	position:absolute;
+	top:5px;
+	left:5px;
+	width:35px;
+	height:53px;
+	background-color:transparent;
+	z-index:52;
+	cursor:hand;
+}
+
+#LOGO_CLICK{
+	position:absolute;
+	top:20px;
+	left:40px;
+	width:180px;
+	height:36px;
+	background-color:transparent;
+	z-index:52;
+	cursor:hand;
+}
+
+#BASEDIV{
+	padding-left:20px;
+	padding-top:15px;
+	visibility:hidden;
+	background-color:transparent;
+}
+
+#LEFT_PART{
+	position:absolute;
+}
+
+#LEFT_IMAGE{
+	position:absolute;
+	text-align:left;
+	top:0px;
+	left:-12px;
+}
+
+#RIGHT_IMAGE{
+	position:absolute;
+	top:-146px;
+	left:59px;
+}
+
+#RIGHT_PART{
+	position:absolute;
+}
+
+#HEADER_BASE{
+	min-height:80px;
+	height:80px;
+	max-height:80px;
+	
+}
+
+#CHANNEL{
+	width:45px;
+	overflow:hidden;
+	text-align:left;
+	display:inline-block;
+	text-overflow:clip;
+}	
+
+#SELECTOR{
+	position:absolute;
+	top:53px;
+	left:35px;
+	background:none;
+	color:#FFFFFF;
+	font-size: 24px;
+	font-weight:normal;
+	overflow:hidden;
+	white-space:nowrap;
+	display:inline-block;
+	text-overflow:clip;
+	height:35px;
+}
+
+#SELECTOR_SPAN{
+	overflow:hidden;
+	white-space:nowrap;
+	display:inline-block;
+	text-overflow:clip;
+}
+
+#THEME_NAME{
+	position:absolute;
+	height:35px;
+	top:80px;
+	left:35px;
+	background:none;
+	color:#AAAAAA;
+	font-weight:normal;
+	white-space:nowrap;
+	overflow:hidden;
+	display:inline-block;
+	text-overflow:clip;
+}
+
+#THEME_SPAN{
+	overflow:hidden;
+	white-space:nowrap;
+	display:inline-block;
+	text-overflow:clip;
+}
+
+
+.POS1{
+	border-bottom: 0px;
+	border-top: 1px solid #5555FF;
+	border-left: 0px;
+	border-right: 1px solid #5555FF;
+	padding-bottom:0px;
+	padding-top:0px;
+	text-align:center;
+	height:62px;
+	width:59px;
+}
+
+.POS1_S{
+	border-bottom: 0px;
+	border-top: 1px solid #B4B4B4;
+	border-left: 0px;
+	border-right: 1px solid #B4B4B4;
+	padding-bottom:0px;
+	padding-top:0px;
+	text-align:center;
+}
+
+#pause{
+	/*background-image:url(../images/bt_pause_push.png);*/
+}
+
+#SET_BUTTON{
+	border:0px;
+	padding:0px;
+	border-collapse:collapse;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	color: #B4B4B4;
+	font-size: 24px;
+	line-height:24px;
+/*	width:24px;
+	height:24px;*/
+	vertical-align:middle;
+	margin:0px;
+	cursor:pointer;
+}
+
+.POS2{
+	border-bottom: 0px;
+	border-top: 1px solid #5555FF;
+	border-left: 0px;
+	border-right: 1px solid #5555FF;
+	padding:0px;
+	color: #3333AA;
+	text-align:center;
+	height:62px;
+}
+
+.POS2_S{
+	border-bottom: 0px;
+	border-top: 1px solid #B4B4B4;
+	border-left: 0px;
+	border-right: 1px solid #B4B4B4;
+	padding:0px;
+	color: #B4B4B4;
+	text-align:center;
+}
+
+#PRESET_BUTTON{
+	border:0px;
+	padding:0px;
+	white-space:nowrap;
+	display:inline-block;
+	width:70px;
+	min-width:70px;
+	max-width:70px;
+	border-collapse:collapse;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	color: #5555FF;
+	font-size: 24px;
+	line-height:24px;
+	vertical-align:middle;
+	margin:0px;
+	cursor:pointer;
+}
+
+#CANCEL_BUTTON{
+	border:0px;
+	padding:0px;
+	display:inline-block;
+	width:70px;
+	min-width:70px;
+	max-width:70px;
+	border-collapse:collapse;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	white-space:nowrap;
+	color: #B4B4B4;
+	font-size: 24px;
+	line-height:24px;
+	vertical-align:middle;
+	margin:0px;
+	cursor:pointer;
+}
+
+.POS3{
+	border-bottom:0px;
+	border-top: 1px solid #5555FF;
+	border-left: 0px;
+	border-right: 1px solid #5555FF;
+	padding:0px;
+	color: #3333AA;
+	text-align:center;
+	height:62px;
+}
+
+.POS3_S{
+	border-bottom:0px;
+	border-top: 1px solid #B4B4B4;
+	border-left: 0px;
+	border-right: 1px solid #B4B4B4;
+	padding:0px;
+	color: #B4B4B4;
+	text-align:center;
+}
+
+
+#LAST_TUNED_BUTTON{
+	border:0px;
+	padding:0px;
+	display:inline-block;
+	width:70px;
+	min-width:70px;
+	max-width:70px;
+	border-collapse:collapse;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	color: #5555FF;
+	font-size: 24px;
+	line-height:24px;
+	vertical-align:middle;
+	margin:0px;
+	cursor:pointer;
+}
+
+#CLEAR_BUTTON{
+	border:0px;
+	padding:0px;
+	display:inline-block;
+	width:70px;
+	min-width:70px;
+	max-width:70px;
+	
+	border-collapse:collapse;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	color: #B4B4B4;
+	font-size: 24px;
+	line-height:24px;
+	vertical-align:middle;
+	margin:0px;
+	cursor:pointer;
+}
+
+.POS4{
+	border-bottom:0px;
+	border-top: 1px solid #5555FF;
+	border-left: 0px;
+	border-right: 1px solid #5555FF;
+	padding-bottom:0px;
+	padding-top:0px;
+	text-align:center;
+	width:59px;
+	height:62px;
+}
+
+.POS4_S{
+	border-bottom:0px;
+	border-top: 1px solid #B4B4B4;
+	border-left: 0px;
+	border-right: 1px solid #B4B4B4;
+	padding-bottom:0px;
+	padding-top:0px;
+	text-align:center;
+}
+
+
+#upButton{
+	background-image:url(images/bt_up_normal.png);
+}
+
+#downButton{
+	background-image:url(images/bt_down_normal.png);
+}
+
+#upButtonSet{
+	background-image:url(images/bt_preset_up_normal.png);
+}
+
+#downButtonSet{
+	background-image:url(images/bt_preset_down_normal.png);
+}
+
+.POS5{
+	border-bottom: 0px;
+	border-top: 1px solid #5555FF;
+	border-left: 0px;
+	border-right: 0px solid #5555FF;
+	text-align:center;
+	padding-bottom:0px;
+	padding-top:0px;
+	width:59px;
+	height:62px;
+}
+
+.POS5_S{
+	border-bottom: 0px;
+	border-top: 1px solid #B4B4B4;
+	border-left: 0px;
+	border-right: 0px solid #B4B4B4;
+	text-align:center;
+	padding-bottom:0px;
+	padding-top:0px;
+}
+
+
+#BASE_TABLE{
+	background-image:url(images/base_center.png);
+	background-position:top;
+	background-repeat:repeat-x;
+	height:133px;
+	max-height:133px;
+	min-height:133px;
+}
+
+#BOTTOM_BASE{
+	height:9px;
+	min-height:9px;
+	max-height:9px;
+	text-align:right;
+}
+
+.baseTr{
+	color: #3333AA;
+	text-align:center;
+	font-size: 24px;
+	line-height:24px;
+	height:62px;
+	max-height:62px;
+	min-height:62px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.select{
+	background:none;
+	color:#FFFFFF;
+	font-size: 30px;
+	font-weight:normal;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+.theme{
+	background:none;
+	color:#AAAAAA;
+	font-size: 27px;
+	font-weight:normal;
+	overflow:hidden;
+	white-space:nowrap;
+	
+}

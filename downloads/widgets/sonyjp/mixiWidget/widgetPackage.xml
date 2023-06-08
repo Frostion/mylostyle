@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2007,2008 Sony Corporation -->
+<widgetPackage xmlns="http://xmlns.sony.net/mylo/widget" version="1.0">
+<info>
+	<packageName>mixi Widget</packageName>
+	<author>Sony Corporation</author>
+	<abstract>mixiの新着情報を確認することができます。
+Copyright 2007,2008 Sony Corporation</abstract>
+	<version>1.100</version>
+	<locale>JP</locale>
+	<engine>1.000</engine>
+	<updateURL>http://www.sony.net/Products/mylo/widget/jp/update/mixi/widgetPackage.xml</updateURL>
+	<siteURL>http://www.sony.co.jp/mylo</siteURL>
+    <defHeight>26</defHeight>
+    <defWidth>22</defWidth>
+    <createDate>2008-01-01</createDate>
+</info>
+</widgetPackage>

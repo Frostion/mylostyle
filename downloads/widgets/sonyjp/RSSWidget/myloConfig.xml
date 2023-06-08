@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2007,2008 Sony Corporation -->
+<config xmlns="http://xmlns.sony.net/mylo/widget" version="1.0">
+  <item title="フィード名" name="feed_name" type="text">
+    <value>&quot;mylo&quot; 最新情報</value>
+  </item>
+	<item title="フィードURL" name="feed_url" type="text" required="on">
+		<value>http://www.sony.jp/xml/mylo.xml</value>
+	</item>
+	<item title="LEDで新着表示" name="notify" type="checkbox" comment="チェックすると、新着情報がある場合にステータスインジケーターでお知らせします。">
+		<value>off</value>
+		<default>off</default>
+	</item>
+	<item title="横スクロール表示" name="marquee" type="checkbox" comment=" チェックすると、タイトルを横スクロールして表示します。">
+		<value>on</value>
+		<default>on</default>
+	</item>
+</config>

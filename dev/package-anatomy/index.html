@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/style.css" type="text/css" />
+		<link rel="icon" sizes="16x16" href="/assets/favicon16.png" />
+		<link rel="icon" sizes="128x128" href="/assets/favicon128.png" />
+		<meta name="theme-color" content="#073B93" />
+		<meta name="viewport" content="width=1000" />
+		<title>widget development | mylo style</title>
+	</head>
+	
+	<body>
+		<div id="nav">
+			<p>
+				<a href="/">HOME</a> | 
+				<a href="/about/">ABOUT</a> | 
+				<a href="/downloads/">RESOURCES & DOWNLOADS</a> | 
+				<a href="/dev/">WIDGET DEVELOPMENT</a> | 
+				<a href="/links/">LINKS</a>
+			</p>
+		</div>
+		
+		<div id="main">
+			<p class="breadcrumb">&gt; <a href="/">home</a> &gt; <a href="/dev/">widget development</a> &gt;</p>
+			<h1>anatomy of a<br>widget package</h1>
+			
+			<h2>what is a ".mylow" file?</h2>
+			<p>Mylo widgets are distributed as <i>widget package</i> files with a ".mylow" extension. Widget packages are just renamed .zip files that contain the HTML code, configuration files, and anything else that makes up the widget. Check out the <a href="../tutorial-hello-world/">Hello World tutorial</a> for instructions on how to create your own widget package file.</p>
+			
+			<h2>necessary files</h2>
+			<p>These two files are <b>required</b> to be in every widget package.</p>
+			<ul>
+				<li><b>index.html</b><br>Contains the HTML code that will be displayed when the widget starts. Just like any other website, this can contain references to any other resource files in your widget, such as CSS, JavaScript, and images.</li>
+				<li><b>widgetPackage.xml</b><br>An XML file that contains information about the widget, such as its title, description, version number, width/height, and author info. Refer to <a href="../widget-description/">Describe Your Widget</a> for more info on how to create this file.</li>
+			</ul>
+			
+			<h2>optional files</h2>
+			<p>These files may optionally be included in the widget package to add extra functionality.</p>
+			<ul>
+				<li><b>myloConfig.xml</b><br>Contains any settings or preferences that the user may adjust in the widget's Settings dialog, such as text entries, dropdowns, and checkboxes. Refer to <a href="../user-preferences/">Add Preferences to Your Widget</a> for more info.</li>
+				<li><b>temp.xml</b><br>The widget may load and save persistent data to this file as XML data. This file may be prepopulated with data and included in the widget package. Refer to <a href="../load-and-save-xml/">Load and Save XML Data</a> for more info.</li>
+				<li><b>eula.txt</b><br>If this "End User License Agreement" file is present, its contents will be displayed to the user when they install the widget, and the user must press <i>Agree</i> in order to continue the installation.</li>
+				<li><b>Any other files</b> may be included in the widget package, such as CSS, JavaScript, or image files, as long as their filenames don't conflict with any of the reserved filenames mentioned here.</li>
+			</ul>
+		</div>
+	</body>
+</html>

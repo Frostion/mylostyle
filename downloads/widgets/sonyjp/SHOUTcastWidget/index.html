@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="copyright" content="Copyright 2007,2008 Sony Corporation">
+<META	http-equiv="Content-Type"	content="text/html;	charset=UTF-8">
+<META	http-equiv="Content-Style-Type"	content="text/css">
+<TITLE>SHOUTcast Widget</TITLE>
+<!-- private css -->
+<LINK rel="stylesheet" href="inetradio.css" type="text/css">
+
+<!-- extension library -->
+<script type="text/javascript" src="/js/lib/WidgetLibrary.js"></script>
+<script type="text/javascript" src="/js/lib/PreferencesLibrary.js"></script>
+<script type="text/javascript" src="/js/lib/ExtensionLibrary.js"></script>
+<script type="text/javascript" src="/js/lib/Common/Extrafunctions.js"></script>
+
+<!-- private library -->
+<script type="text/javascript" src="inetradio.js"></script>
+</head>
+	<body class="widget_body" onload="init();">
+		<div id="BASEDIV">
+			<div id="ANTENA_CLICK" onclick="openLogo();"></div><div id="LOGO_CLICK" onclick="openLogo();"></div>
+			<div id ="LOGO"><img src="images/ShoutCast_LOGO.png" width="224" height="64"/></div>
+			<table id="BASE_TABLE" width="99%" height="152" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td id="HEADER_BASE" colspan="5" height="80">
+					<div id ="LEFT_PART"><img id="LEFT_IMAGE" src="images/base_left.png" width="12" height="152"/></div>
+					<span id="SELECTOR"><span id="CHANNEL"><PRE> </PRE></span><span id="SELECTOR_SPAN"><PRE> </PRE></span></span>
+					<span id="THEME_NAME"><span id="THEME_SPAN"><PRE> </PRE></span></span>
+				</td>
+			</tr>
+			<tr id="BUTTON_PANEL">
+				<td id="POS1" class="POS1" width="59" height="62">
+					<img name="pause" id ="pause" src="images/bt_play_normal.png" width="24" height="24"/>
+					
+				</td>
+				<td id="POS2" class="POS2" height="62"><button id="PRESET_BUTTON">Preset</button></td>
+				<td id="POS3" class="POS3" height="62"><button id="LAST_TUNED_BUTTON">Last<BR>Tuned</button></td>
+				<td id="POS4" class="POS4" width="59" height="62">
+					<img id="upButton" src="images/bt_up_normal.png" width="24" height="24"/>
+				</td>
+				<td id="POS5" class="POS5" width="59" height="62">
+					<img id="downButton" src="images/bt_down_normal.png" width="24" height="24"/>
+				</td>
+				
+			</tr>
+			<tr>	
+				<td id="BOTTOM_BASE"  colspan="4" height="9"><td align="right"><div id ="RIGHT_PART"><img id="RIGHT_IMAGE" src="images/base_right.png" width="12" height="152"/></div></td></td>
+			</tr>
+			</table>
+					
+			
+		</div>
+	</body>
+</html>

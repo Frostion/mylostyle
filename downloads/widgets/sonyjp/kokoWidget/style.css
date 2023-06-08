@@ -1,0 +1,179 @@
+body {}
+#main {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 240px;
+	height: 360px;
+	background-image: url(images/back_panel.png);
+	background-repeat: no-repeat;
+}
+#btn_left {	/* btnLeft */
+	position: absolute;
+	top: 16px;
+	left: 16px;
+}
+#btn_logo {	/* btnLogo */
+	position: absolute;
+	top: 16px;
+	left: 50px;
+}
+#btn_right {	/* btnRight */
+	position: absolute;
+	top: 16px;
+	left: 194px;
+}
+.lblShopName {
+	position: absolute;
+	top: 54px;
+	left: 16px;
+	width: 210px;
+	height: 1.2em;
+	overflow: hidden;
+	color: #c71b1d;
+	text-align: center;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.imgPhoto {
+	position: absolute;
+	top: 74px;
+	left: 15px;
+	width: 210px;
+	height: 202px;
+	overflow: hidden;
+	text-align: center;
+}
+/*
+ * Positions for imgCompass and distArea are relative to imgPhoto.
+ */
+.imgCompass {
+	position: absolute;
+	top: 2px;
+	left: 130px;
+}
+.distArea {
+	position: absolute;
+	top: 2px;
+	left: 85px;
+	width: 41px;
+	color: #c71b1d;
+	background-image: url(images/dist_back.png);
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: center;
+}
+#btnViewMap {
+	position: absolute;
+	top: 286px;
+	left: 16px;
+}
+#getposition {	/* btnGetPosition */
+	position: absolute;
+	top: 316px;
+	left: 14px;
+}
+#return {
+	position: absolute;
+	top: 316px;
+	left: 14px;
+}
+#web_start {
+	position: absolute;
+	top: 316px;
+	left: 14px;
+	z-index: 5;
+}
+#lblAddr {
+	position: absolute;
+	top: 286px;
+	left: 39px;
+	width: 184px;
+	height: 20px;
+	overflow: hidden;
+	font-size: 12pt;
+}
+#splash {
+	position: absolute;
+	top: 74px;
+	left: 15px;
+	width: 210px;
+	text-align: center;
+	color: gray;
+	font-size: 11pt; 
+}
+#content {
+}
+#info {
+	position: absolute;
+	top: 54px;
+	left: 16px;
+	width: 210px;
+	height: 202px;
+	overflow: auto;
+	text-align: center;
+	font-size: 12pt;
+}
+#main_loading {
+	position: absolute;
+	top: 130px;
+	left: 90px;
+}
+#main_scanning {
+	position: absolute;
+	top: 127;
+	left: 86px;
+}
+
+#control {
+}
+#btn_prev {
+	position: absolute;
+	top: 145px;
+	left: 55px;
+	z-index: 5;
+}
+#btn_next {
+	position: absolute;
+	top: 145px;
+	left: 155px;
+	z-index: 5;
+}
+#btn_back {
+	position: absolute;
+	top: 195px;
+	left: 105px;
+	z-index: 5;
+}
+#btn_info_div {
+	position: absolute;
+	top: 80px;
+	left: 40px;
+}
+#station_list {
+	width: 210px;
+	height: 202px;
+	overflow: hidden;
+	text-align: left;
+}
+.station_arrow {
+	width: 20px;
+	height: 20px;
+}
+.station_title {
+	font-size: 12pt;
+	color: blue;
+	text-decoration: underline;
+}
+.station_distance {
+	font-size: 11pt;
+}
+.desc {
+	position: absolute;
+	top: 74px;
+	left: 15px;
+	width: 210px;
+	height: 202px;
+	overflow: auto;
+	font-size: 12pt;
+}

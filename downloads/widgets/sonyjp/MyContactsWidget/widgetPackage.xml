@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2007,2008 Sony Corporation -->
+<widgetPackage xmlns="http://xmlns.sony.net/mylo/widget" version="1.0">
+  <info>
+    <packageName>My Contacts Widget</packageName>
+    <author>Sony Corporation</author>
+    <abstract>コミュニケーションアプリのコンタクト情報を登録することで、このWidgetからチャットを開始することができます。Widget設定モードに入り、歯車アイコンを押して表示されるコンタクト設定画面で登録してください。
+Copyright 2007,2008 Sony Corporation</abstract>
+    <version>1.200</version>
+    <locale>JP</locale>
+    <engine>1.000</engine>
+    <updateURL>http://www.sony.net/Products/mylo/widget/jp/update/MyContacts/widgetPackage.xml</updateURL>
+    <siteURL>http://www.sony.co.jp/mylo</siteURL>
+    <minWidth>20</minWidth>
+    <maxWidth>55</maxWidth>
+    <defWidth>20</defWidth>
+    <defHeight>36</defHeight>
+    <createDate>2008-01-01</createDate>
+  </info>
+</widgetPackage>

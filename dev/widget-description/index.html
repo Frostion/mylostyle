@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/style.css" type="text/css" />
+		<link rel="icon" sizes="16x16" href="/assets/favicon16.png" />
+		<link rel="icon" sizes="128x128" href="/assets/favicon128.png" />
+		<meta name="theme-color" content="#073B93" />
+		<meta name="viewport" content="width=1000" />
+		<title>widget development | mylo style</title>
+	</head>
+	
+	<body>
+		<div id="nav">
+			<p>
+				<a href="/">HOME</a> | 
+				<a href="/about/">ABOUT</a> | 
+				<a href="/downloads/">RESOURCES & DOWNLOADS</a> | 
+				<a href="/dev/">WIDGET DEVELOPMENT</a> | 
+				<a href="/links/">LINKS</a>
+			</p>
+		</div>
+		
+		<div id="main">
+			<p class="breadcrumb">&gt; <a href="/">home</a> &gt; <a href="/dev/">widget development</a> &gt;</p>
+			<h1>describe your widget</h1>
+			<p>Every widget page must contain a <b>widgetPackage.xml</b> file. This file contains necessary information about the widget, including its title, description, version number, author info, and width and height.</p>
+			<p><i><b>Tip:</b> If you don't want to write this file by hand, use the <a href="../pkg-generator/">widgetPackage Generator</a> instead!</i></p>
+			
+			<h2>create a widgetPackage.xml file</h2>
+			<p>Here's an example <b>widgetPackage.xml</b> file:
+			<pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;widgetPackage xmlns="http://xmlns.sony.net/mylo/widget" version="1.0"&gt;
+	&lt;info&gt;
+		&lt;packageName&gt;A Cool Widget&lt;/packageName&gt;
+		&lt;author&gt;Your Name Here&lt;/author&gt;
+		&lt;abstract&gt;A cool widget I made!&lt;/abstract&gt;
+		&lt;version&gt;1.000&lt;/version&gt;
+		&lt;locale&gt;US&lt;/locale&gt;
+		&lt;engine&gt;1.000&lt;/engine&gt;
+		&lt;updateURL&gt;http://yoursite.com/mylo/widgetPackage.xml&lt;/updateURL&gt;
+		&lt;siteURL&gt;http://yoursite.com/&lt;/siteURL&gt;
+		&lt;minWidth&gt;15&lt;/minWidth&gt;
+		&lt;maxWidth&gt;50&lt;/maxWidth&gt;
+		&lt;minHeight&gt;15&lt;/minHeight&gt;
+		&lt;maxHeight&gt;50&lt;/maxHeight&gt;
+		&lt;defWidth&gt;32&lt;/defWidth&gt;
+		&lt;defHeight&gt;32&lt;/defHeight&gt;
+		&lt;createDate&gt;2023-05-09&lt;/createDate&gt;
+	&lt;/info&gt;
+&lt;/widgetPackage&gt;</pre>
+			<p>Copy and paste the above text into a new <b>widgetPackage.xml</b> file, then modify the contents of the metadata tags to describe your widget.</p>
+			
+			<h3>metadata tag descriptions</h3>
+			<ul>
+				<li><b>packageName</b> - The name of your widget that's shown in the widget installer.</li>
+				<li><b>author</b> - The name of the author that's shown in the widget installer.</li>
+				<li><b>abstract</b> - A short description of your widget.</li>
+				<li><b>version</b> - The current revision/version number of your widget.</li>
+				<li><b>locale</b> - A 2-letter code denoting the language of your widget, such as US or JP.</li>
+				<li><b>engine</b> - The minimum OS version that the mylo must be running in order to install your widget. Specify 1.000 for full compatibility.</li>
+				<li><b>updateURL</b> - The mylo will try to download the most recent widgetPackage.xml file for this widget from this URL when checking for updates. This may be left blank if you don't want to provide automatic updates.</li>
+				<li><b>siteURL</b> - When selecting "go to author's page" in the widget installer, this website URL will open.</li>
+				<li><b>minWidth & maxWidth</b> - The minimum and maximum width that the widget can be resized to. Omit these tags to prevent horizontal resizing.</li>
+				<li><b>minHeight & maxHeight</b> - The minimum and maximun height that the widget can be resized to. Omit these tags to prevent vertical resizing.</li>
+				<li><b>defWidth & defHeight</b> - The default width and height of your widget.</li>
+				<li><b>createDate</b> - The date that this revision of the widget was made, in YYYY-MM-DD format.</li>
+			</ul>
+			
+			<img class="center" src="widgetinstaller.jpg">
+			<p class="caption">The widget installer showing the metadata of a widget.</p>
+		</div>
+	</body>
+</html>

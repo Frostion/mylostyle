@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META name="copyright" content="Copyright 2007 Sony Corporation">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>General RSS Widget</title>
+<!-- extension css -->
+
+<!-- private css -->
+<link rel="stylesheet" href="RSSReaderWidget.css" type="text/css">
+
+<!-- extension library -->
+<script type="text/javascript" src="/js/lib/WidgetLibrary.js"></script>
+<script type="text/javascript" src="/js/lib/PreferencesLibrary.js"></script>
+<script type="text/javascript" src="/js/lib/ExtensionLibrary.js"></script>
+<script type="text/javascript" src="/js/lib/Common/Extrafunctions.js"></script>
+
+
+<!-- private library -->
+<script type="text/javascript" src="RSSReaderWidget.js"></script>
+</head>
+<body class="widget_body" onload="init();">
+<table id="master_table" class="pure_layout_table" width="99%" cellspacing="0">
+  <tbody>
+    <tr>
+      <td id="BORDER_LEFT_TOP"></td>
+      <td id="BORDER_TOP"></td>
+      <td id="BORDER_RIGHT_TOP"></td>
+    </tr>
+    <tr>
+      <td id="BORDER_LEFT"></td>
+      <td id="CONTENT">
+	    <div id="TITLE">
+	    <span id="FEED_TITLE"></span>
+			<span id="LAST_UPDATED_DATE"></span>
+		  <span id="UPDATE_BUTTON">
+		    <img id="UPDATE_BUTTON_IMG" src="images/bt_update_normal.png" width="96" height="32"></img>
+		  </span>
+		  <span id="LED">
+		    <img id="LED_IMG" src="images/LED_preset.png" />
+		  </span>
+		</div>
+        <div id="RSS_READER_WIDGET_CONTENT"></div>
+      </td>
+      <td id="BORDER_RIGHT"></td>
+    </tr>
+    <tr>
+      <td id="BORDER_LEFT_BOTTOM"></td>
+      <td id="BORDER_BOTTOM">
+	    <div class="rss_reader_widget_foot_div">
+			<table id="RSS_READER_WIDGET_FOOT">
+			  <tbody cellspacing="0px">
+			    <tr>
+				  <td id="UP_SCROLL_BUTTON">
+				   	<img id="UP_BUTTON_IMG" src="images/bt_up_normal.png" width="50" height="50"></img>
+	              </td>
+				  <td id="DOWN_SCROLL_BUTTON">
+	              	<img id="DOWN_BUTTON_IMG" src="images/bt_down_normal.png" width="50" height="50"></img>
+				  </td>
+			    </tr>
+	          <tbody>
+			</table>
+		</div>
+	  </td>
+      <td id="BORDER_RIGHT_BOTTOM"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

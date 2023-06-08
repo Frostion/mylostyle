@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/style.css" type="text/css" />
+		<link rel="icon" sizes="16x16" href="/assets/favicon16.png" />
+		<link rel="icon" sizes="128x128" href="/assets/favicon128.png" />
+		<meta name="theme-color" content="#073B93" />
+		<meta name="viewport" content="width=1000" />
+		<title>widget development | mylo style</title>
+	</head>
+	
+	<body>
+		<div id="nav">
+			<p>
+				<a href="/">HOME</a> | 
+				<a href="/about/">ABOUT</a> | 
+				<a href="/downloads/">RESOURCES & DOWNLOADS</a> | 
+				<a href="/dev/">WIDGET DEVELOPMENT</a> | 
+				<a href="/links/">LINKS</a>
+			</p>
+		</div>
+		
+		<div id="main">
+			<p class="breadcrumb">&gt; <a href="/">home</a> &gt; <a href="/dev/">widget development</a> &gt;</p>
+			<h1>add preferences to your widget</h1>
+			<p>If you want the user to be able to change settings or preferences for your widget, you can design a simple menu that contains text entries, checkboxes, and lists that the user can access when setting up the widget. This menu is similar to an HTML form, just a bit more limited. For example, an RSS feed reader may provide a text entry field for the RSS feed URL and a checkbox for allowing notifications, or a world clock may provide a list of time zones that the user can pick from. All of the controls you want to provide in your widget's settings menu are defined in the <b>myloConfig.xml</b> file.</p>
+			<!--<p><i><b>Tip:</b> If you don't want to write this file by hand, use the <a href="../cfg-generator/">myloConfig Generator</a> instead!</i></p>-->
+			
+			
+			<h2>create a myloConfig.xml file</h2>
+			<p>Here's an example <b>myloConfig.xml</b> file:
+			<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;config xmlns="http://xmlns.sony.net/mylo/widget" version="1.0"&gt;
+	&lt;item title="Select" name="test_select" type="select" comment="Select one of these options"&gt;
+		&lt;option&gt;One&lt;/option&gt;
+		&lt;option&gt;Two&lt;/option&gt;
+		&lt;option&gt;Three&lt;/option&gt;
+		&lt;value&gt;One&lt;/value&gt;
+		&lt;default&gt;One&lt;/default&gt;
+	&lt;/item&gt;
+	
+	&lt;item title="Optional Text" name="test_opt_text" type="text" comment="Enter some text here (optional)"&gt;
+		&lt;value&gt;This may be left blank&lt;/value&gt;
+		&lt;default&gt;This may be left blank&lt;/default&gt;
+	&lt;/item&gt;
+	
+	&lt;item title="Required Text" name="test_reqd_text" type="text" comment="This text is required" required="on"&gt;
+		&lt;value&gt;This is required&lt;/value&gt;
+		&lt;default&gt;This is required&lt;/default&gt;
+	&lt;/item&gt;
+	
+	&lt;item title="Checkbox" name="test_checkbox" type="checkbox" comment="Check or uncheck this box"&gt;
+		&lt;value&gt;off&lt;/value&gt;
+		&lt;default&gt;off&lt;/default&gt;
+	&lt;/item&gt;
+&lt;/config&gt;</pre>
+			<p>Copy and paste the above text into a new <b>myloConfig.xml</b> file, then modify the contents of the &lt;config&gt; tag to create your desired controls.</p>
+			
+			<h3>the &lt;item&gt; tag</h3>
+			<p>Each control is defined by an &lt;item&gt; tag:</p>
+			<pre>&lt;item&nbsp;title=&quot;Label&quot;&nbsp;name=&quot;control_name&quot;&nbsp;type=&quot;text&quot;&nbsp;comment=&quot;Description&quot;&nbsp;required=&quot;on&quot;&gt;</pre>
+			<p>The attributes of the &lt;item&gt; tag define the control's name and type:</p>
+			<ul>
+				<li><b>title</b> - The label of the control that's shown to the user.</li>
+				<li><b>name</b> - Your widget's JavaScript code uses this name to access the text/value entered into this control.</li>
+				<li><b>type</b> - The type of the control, which can be "select", "text", or "checkbox".</li>
+				<li><b>comment</b> - A more detailed description of the control that can be shown to the user. <i>(optional)</i></li>
+				<li><b>required="on"</b> - If included, the user cannot leave this text entry blank. <i>(optional, for "text" controls only)</i></li>
+			</ul>
+			<p>Each &lt;item&gt; can also contain &lt;value&gt; and &lt;default&gt; tags to define the default state (selected item, entered text, or checkbox state) of the control. The contents of the &lt;value&gt; tag are used when the widget is first created, while the contents of the &lt;default&gt; tag are used when the user presses the <i>Reset</i> button in the preferences menu.</p>
+			<h3>the "select" control</h3>
+			<p>The <b>select</b> control allows the user to select one option from a predefined list of options. For example, a world clock may use a <b>select</b> control to provide a list of time zones that the user can pick from.</p>
+			<pre>&lt;item title="Select" name="test_select" type="select" comment="Select one of these options"&gt;
+	&lt;option&gt;One&lt;/option&gt;
+	&lt;option&gt;Two&lt;/option&gt;
+	&lt;option&gt;Three&lt;/option&gt;
+	&lt;value&gt;One&lt;/value&gt;
+	&lt;default&gt;One&lt;/default&gt;
+&lt;/item&gt;</pre>
+			<p>The options that the user can select from are defined by &lt;option&gt; tags. These tags may optionally contain a <b>value</b> attribute, which holds extra data for each option that can be retreived by your JavaScript code.</p>
+			
+			<h3>the "text" control</h3>
+			<p>The <b>text</b> control provides a text entry field that the user may type arbitrary text in. For example, an RSS feed reader widget may provide a <b>text</b> control for the user to enter an RSS feed URL into.</p>
+			<pre>&lt;item title="Optional Text" name="test_opt_text" type="text" comment="Enter some text here (optional)"&gt;
+	&lt;value&gt;This may be left blank&lt;/value&gt;
+	&lt;default&gt;This may be left blank&lt;/default&gt;
+&lt;/item&gt;</pre>
+			<p>Optionally, a text control may be marked as required by adding the <b>required="on"</b> attribute to its item tag. This prevents the user from being able to save their preferences if they leave this field blank.</p>
+			<pre>&lt;item title="Required Text" name="test_reqd_text" type="text" comment="This text is required" required="on"&gt;
+	&lt;value&gt;This is required&lt;/value&gt;
+	&lt;default&gt;This is required&lt;/default&gt;
+&lt;/item&gt;</pre>
+			
+			<h3>the "checkbox" control</h3>
+			<p>The <b>checkbox</b> control provides a simple on/off switch that the user can toggle by tapping it. This can be used to enable or disable optional features on your widget that not all users may be interested in. For example, an RSS feed reader widget may flash the Mylo's LED to indicate when a new post has appeared in the RSS feed. Some users may find that distracting, so a checkbox control can be provided to give them the option to enable or disable that feature.</p>
+			<pre>&lt;item title="Checkbox" name="test_checkbox" type="checkbox" comment="Check or uncheck this box"&gt;
+	&lt;value&gt;off&lt;/value&gt;
+	&lt;default&gt;off&lt;/default&gt;
+&lt;/item&gt;</pre>
+			<p>The &lt;value&gt; and &lt;default&gt; tags define whether the checkbox is <b>on</b> (checked) or <b>off</b> (cleared) by default.</p>
+			
+			
+			<h2>access preferences with javascript</h2>
+			<p>Now that you've created your preferences menu, you need to be able to actually read the preferences that the user has specified. First, you must include the mylo screen libraries by adding the following code to the &lt;head&gt; of your <b>index.html</b>, above any other &lt;script&gt; tags present.</p>
+			<pre>&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;/js/lib/WidgetLibrary.js&quot;&gt;&lt;/script&gt;
+&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;/js/lib/PreferencesLibrary.js&quot;&gt;&lt;/script&gt;
+&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;/js/lib/ExtensionLibrary.js&quot;&gt;&lt;/script&gt;</pre>
+			<p>Next, include the following boilerplate code in your widget's JavaScript:</p>
+			<pre>var extension = new Extension();
+var prefObject = new Preferences(prefCallback);
+
+function prefCallback()
+{
+	//handle new preference values here
+	
+	notifyReadyWidget();
+	return prefObject;
+}
+
+function getPreferenceObject()
+{
+	return prefObject;
+}
+
+function changePreference(prefObject, updateFlag)
+{
+	if(updateFlag)
+	{
+		extension.saveFile(Extension.fileType.CONFIG, savePrefCallback, prefObject.save());  
+		prefCallback();
+	}
+}
+
+function savePrefCallback() {}</pre>
+			<ul>
+				<li><b>prefObject</b> contains a list of all the preference items/controls you defined in <b>myloConfig.xml</b>, along with the values that the user has specified for them.</li>
+				<li><b>prefCallback()</b> is called when the preferences object is first loaded or updated. Replace the "//handle new preference values here" comment with your code for reading and handling the new preference values (see the next section for how to read these values).</li>
+				<li><b>changePreference()</b> is called when the user accesses the preferences menu. <b>updateFlag</b> will be true if they changed any values. The <b>extension.saveFile()</b> call will save the user's entered values back into <b>myloConfig.xml</b> by modifying the contents of the &lt;value&gt; tags for each control.</li>
+				<li><b>savePrefCallback()</b> is called when <b>extension.saveFile()</b> has finished saving the user's entered values into <b>myloConfig.xml</b>. You usually don't need to do anything here.</li>
+			</ul>
+			
+			<h3>how to read preference values</h3>
+			<p>You can read preference values anywhere in your widget's code - both inside and outside of <b>prefCallback()</b>. The <b>prefObject</b> contains an array of each control defined in <b>myloConfig.xml</b>, and each control can be accessed either by accessing that array directly or by looking up a control by its <b>name</b> attribute.</p>
+			<pre>var prefItem = prefObject.prefsItems[index];      //access a control by index number</pre>
+			<pre>var prefItem = prefObject.getItemByName("name");  //look up a control by its name attribute</pre>
+			<p>Now that you have the control that you want to read as <b>prefItem</b>, you may read its value with <b>prefItem.value</b> or read its name attribute with <b>prefItem.name</b>.</p>
+			<p><i><b>TODO:</b> Describe how to access the options list of a "select"-type control.</i></p>
+			
+			<h3>how to modify preference values</h3>
+			<p>Preference values aren't read-only - they can be modified as well. Just assign a new value to <b>prefItem.value</b>, then save the new value with the <b>extension.saveFile()</b> function:</p>
+			<pre>prefObject.getItemByName("name").value = "new value";
+extension.saveFile(Extension.fileType.CONFIG, savePrefCallback, prefObject.save());</pre>
+			
+			<h2>example widget</h2>
+			<p><a href="prefstest.mylow" download>Download prefstest.mylow</a> - This widget provides a simple preferences menu that contains an example of every type of control. The value of each control is displayed on the widget itself.</p>
+		</div>
+	</body>
+</html>

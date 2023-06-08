@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/style.css" type="text/css" />
+		<link rel="icon" sizes="16x16" href="/assets/favicon16.png" />
+		<link rel="icon" sizes="128x128" href="/assets/favicon128.png" />
+		<meta name="theme-color" content="#073B93" />
+		<meta name="viewport" content="width=1000" />
+		<title>widget development | mylo style</title>
+	</head>
+	
+	<body>
+		<div id="nav">
+			<p>
+				<a href="/">HOME</a> | 
+				<a href="/about/">ABOUT</a> | 
+				<a href="/downloads/">RESOURCES & DOWNLOADS</a> | 
+				<a href="/dev/">WIDGET DEVELOPMENT</a> | 
+				<a href="/links/">LINKS</a>
+			</p>
+		</div>
+		
+		<div id="main">
+			<p class="breadcrumb">&gt; <a href="/">home</a> &gt; <a href="/dev/">widget development</a> &gt;</p>
+			<h1>tutorial: hello world!</h1>
+			<p>In this tutorial, you'll learn how to create a basic Mylo widget that just displays the text "Hello world!" in a box - a classic first-time programming project.</p>
+			
+			<h2>creating the necessary files</h2>
+			<p>Mylo widgets are essentially just tiny websites - they're designed and programmed using HTML, CSS, and JavaScript, just like any other website. For this widget, because all we'll be doing is displaying some text, we'll only need to create two files - an "index.html" and a "widgetPackage.xml". Before you get started, I recommend creating a new folder whenever you start a new widget project to keep all its files contained and organized.</p>
+			
+			<h3>index.html</h3>
+			<p>The <b>index.html</b> file contains the HTML code that will be displayed when your widget starts. Just like any other website, this can contain references to any other external resources in your widget, like CSS and JS files.</p>
+			<p>For this project, create a new <b>index.html</b> file and enter the following text:</p>
+			<pre>&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta&nbsp;http&#45;equiv=&quot;Content&#45;Type&quot;&nbsp;content=&quot;text/html;&nbsp;charset=utf&#45;8&quot;&nbsp;/&gt;
+		&lt;title&gt;hello&lt;/title&gt;
+	&lt;/head&gt;
+	
+	&lt;body&nbsp;style=&quot;background&#45;color:&nbsp;#0000FF;&quot;&gt;
+		&lt;p&nbsp;style=&quot;text&#45;align:&nbsp;center;&nbsp;color:&nbsp;#FFFFFF;&quot;&gt;Hello&nbsp;world!&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+			<p>This will create a widget with a blue background and the text "Hello world!" in a white font.</p>
+			<p><i><b>Tip:</b> If you don't specify a background for the body, the background will just be transparent.</i></p>
+			
+			<h3>widgetPackage.xml</h3>
+			<p>Next, the <b>widgetPackage.xml</b> file. This is an XML file that contains information about your widget, such as its title, description, version number, width/height, and author info. Create a new <b>widgetPackage.xml</b> file and enter the following text:</p>
+			<pre>&lt;?xml&nbsp;version=&quot;1.0&quot;&nbsp;encoding=&quot;utf&#45;8&quot;&nbsp;?&gt;
+&lt;widgetPackage&nbsp;xmlns=&quot;http://xmlns.sony.net/mylo/widget&quot;&nbsp;version=&quot;1.0&quot;&gt;
+	&lt;info&gt;
+		&lt;packageName&gt;Hello&nbsp;World!&lt;/packageName&gt;
+		&lt;author&gt;Frost&nbsp;Sheridan&lt;/author&gt;
+		&lt;abstract&gt;My&nbsp;first&nbsp;mylo&nbsp;widget!&lt;/abstract&gt;
+		&lt;version&gt;1.000&lt;/version&gt;
+		&lt;locale&gt;US&lt;/locale&gt;
+		&lt;engine&gt;1.000&lt;/engine&gt;
+		&lt;updateURL&gt;&lt;/updateURL&gt;
+		&lt;siteURL&gt;http://cyberdragon.digital/&lt;/siteURL&gt;
+		&lt;minWidth&gt;20&lt;/minWidth&gt;
+		&lt;maxWidth&gt;50&lt;/maxWidth&gt;
+		&lt;minHeight&gt;10&lt;/minHeight&gt;
+		&lt;maxHeight&gt;32&lt;/maxHeight&gt;
+		&lt;defWidth&gt;32&lt;/defWidth&gt;
+		&lt;defHeight&gt;25&lt;/defHeight&gt;
+		&lt;createDate&gt;2023&#45;05&#45;08&lt;/createDate&gt;
+	&lt;/info&gt;
+&lt;/widgetPackage&gt;</pre>
+			
+			<h2>creating the widget package</h2>
+			<p>Now that both files have been created for this widget, we can package them up into a widget file that the Mylo can run. Mylo widget files are called <i>widget packages</i> and have a ".mylow" extension. They're nothing special though - they're literally just renamed zip files!</p>
+			<p>The process for creating a widget package is very simple. Here's how you do it on Windows:</p>
+			<p>Select all of the files you want to include in your widget (in this case, just <b>index.html</b> and <b>widgetPackage.xml</b>). Right-click one of your selected files and go to <i>Send To -> Compressed (zipped) folder</i>.</p>
+			<img class="center" src="01.jpg">
+			<p>Rename the newly-created zip file to <b>widgetname.mylow</b> (replace "widgetname" with whatever you want the filename to be - I named mine <b>hello.mylow</b>).</p>
+			<img class="center" src="02_before.jpg">
+			<img class="center" src="02_after.jpg">
+			<p>If Windows warns you about changing the file extension, click <i>Yes</i> to allow it.</p>
+			<img class="center" src="02_warn.jpg">
+			<p>Cool! You've just created your very first widget. Now, let's load it onto your Mylo.</p>
+			
+			<h2>installing the widget</h2>
+			<p>Power on your Mylo and connect it to your computer via USB. It should show <i>MSC (Mass Storage Class) Mode</i> on the screen and appear on your computer as a USB flash drive.</p>
+			<p>Copy your <b>hello.mylow</b> package to the Mylo's storage. I recommend creating a <b>Widgets</b> folder on your Mylo to put all your widget packages in.</p>
+			<p>Once the file has finished copying, unplug your Mylo. It'll say <i>Please Wait...</i> for a minute or so as it indexes the changes you've made to its storage.</p>
+			<p>Press the orange <i>mylo</i> button on the right side of the Mylo's screen to open the <i>mylo screen</i>, the desktop where you can place your widgets. Your mylo screen may already have some widgets on it or be totally blank. Mine just has the Google search bar on it right now.</p>
+			<img class="center" src="myloscreenblank.jpg">
+			<p>Press the <i>option</i> button and select <i>Widget Installer</i>.</p>
+			<img class="center" src="gotowidgetinstaller.jpg">
+			<p>Select <i>Install</i> in the widget installer.</p>
+			<img class="center" src="widgetinstaller.jpg">
+			<p>Navigate to your <b>hello.mylow</b> file. Select it, then hit <i>Install</i>.</p>
+			<img class="center" src="filemanager.jpg">
+			<img class="center" src="mylowselected.jpg">
+			<p>Sony will warn you that you're about to Install A Software. Hit <i>OK</i> to continue.</p>
+			<img class="center" src="installwarn.jpg">
+			<p>If all went well, the information entered in your <b>widgetPackage.xml</b> should now show up! Hit <i>OK</i> to continue.</p>
+			<img class="center" src="confirm.jpg">
+			<p>Your widget should now appear in your list of installed widgets.</p>
+			<img class="center" src="widgetinstalled.jpg">
+			<p>Press the <i>back</i> button to return to the mylo screen, then press <i>option</i> and select <i>Widget Setting Mode</i>.</p>
+			<img class="center" src="gotosettingmode.jpg">
+			<p>If you have any widgets active, orange borders will appear around them. Press <i>option</i> again and select <i>Add Widget</i>.</p>
+			<img class="center" src="gotoaddwidget.jpg">
+			<p>Select your <b>Hello World</b> widget from the list.</p>
+			<img class="center" src="addwidget.jpg">
+			<p>Your widget should appear in the center of the screen. While in Widget Setting Mode, you can drag the top-left square to move the widget, drag the bottom-right square to resize it, and press the top-right square to delete it. Deleting a widget from here doesn't actually uninstall it though - it just disables it.</p>
+			<img class="center" src="widgetadded.jpg">
+			<p>Press <i>option</i> and select <i>Exit Setting Mode</i> to save your changes. Your widget is now fully installed!</p>
+			<img class="center" src="exitsettingmode.jpg">
+			<p>If you want to actually uninstall your widget, go back to the Widget Installer, scroll to your widget, and press <i>Uninstall</i>.</p>
+			
+			<h2>what next?</h2>
+			<p>So you've successfully made your first widget! Next, you can try adjusting the details of your widget in the <b>widgetPackage.xml</b> file - read the <a href="../widget-description/">Describe Your Widget</a> guide for more information. Need inspiration for what kinds of widgets to create? Check out the other widgets available in the <a href="/downloads/">Resouces & Downloads</a> section! Remember - because widgets are just renamed zip files, you can easily open up any widget file you find and read its source code to see how it works.</p>
+			
+			<h2>example widget</h2>
+			<p>Download the widget created in this tutorial: <a href="hello.mylow" download>hello.mylow</a></p>
+		</div>
+	</body>
+</html>

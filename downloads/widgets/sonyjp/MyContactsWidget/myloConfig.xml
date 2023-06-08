@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2007,2008 Sony Corporation -->
+<config xmlns="http://xmlns.sony.net/mylo/widget" version="1.0">
+  <item name="Skype" type="text" visible="off">
+    <value>on</value>
+  </item>
+  <item name="Yahoo" type="text" visible="off">
+    <value>off</value>
+  </item>
+  <item name="Google" type="text" visible="off">
+    <value>on</value>
+  </item>
+  <item name="AIM" type="text" visible="off">
+    <value>off</value>
+  </item>
+</config>

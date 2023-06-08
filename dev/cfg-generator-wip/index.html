@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/style.css" type="text/css" />
+		<link rel="icon" sizes="16x16" href="/assets/favicon16.png" />
+		<link rel="icon" sizes="128x128" href="/assets/favicon128.png" />
+		<meta name="theme-color" content="#073B93" />
+		<meta name="viewport" content="width=1000" />
+		<style>
+			td { padding: 2px; background-color: #eee; }
+			form > table {  }
+			table { width: 100%; }
+			input.editidle { background-color: #bbb; }
+			input.editactive { background-color: #F86618; animation: 0.3s linear infinite alternate editactive; }
+			@keyframes editactive
+			{
+				from { background-color: #F86618: }
+				to { background-color: #ff9e6b; }
+			}
+		</style>
+		<title>widget development | mylo style</title>
+	</head>
+	
+	<body>
+		<div id="nav">
+			<p>
+				<a href="/">HOME</a> | 
+				<a href="/about/">ABOUT</a> | 
+				<a href="/downloads/">RESOURCES & DOWNLOADS</a> | 
+				<a href="/dev/">WIDGET DEVELOPMENT</a> | 
+				<a href="/links/">LINKS</a>
+			</p>
+		</div>
+		
+		<div id="main">
+			<p class="breadcrumb">&gt; <a href="/">home</a> &gt; <a href="/dev/">widget development</a> &gt;</p>
+			<h1>myloconfig generator</h1>
+			<p>Use this tool to create a <b>myloConfig.xml</b> file and add a preferences menu to your widget. Refer to <a href="../user-preferences/">Add Preferences to Your Widget</a> for more info on this file and how to work with user preferences.</p>
+			
+			<h2>define your controls</h2>
+			<form>
+				<label>Create controls:</label>
+				<input type="button" value="Add Select" onclick="addSelectControl()">
+				<input type="button" value="Add Text Entry" onclick="addTextControl()">
+				<input type="button" value="Add Checkbox" onclick="addCheckboxControl()">
+				
+				<table width="100%">
+					<tr>
+						<td width="50%">
+							<h3>preview pane</h3>
+							<p>Enter default values for controls here.</p>
+						</td>
+						<td width="50%">
+							<h3>edit pane</h3>
+							<p>Click a control's 📝 button in the preview pane to edit it here.</p>
+						</td>
+					</tr>
+					<tr>
+						<td id="editorpreview">
+							<table>
+								<tr>
+									<td>
+										<input type="button" value="📝" class="editidle"><input type="button" value="🔼" class="editidle"><input type="button" value="🔽" class="editidle"><input type="button" value="❌" class="editidle">
+									</td>
+									<td><label>Label:</label></td>
+									<td><input type="text" id="name" size="10"></td>
+									
+								</tr>
+								<tr>
+									<td>
+										<input type="button" value="📝" class="editidle"><input type="button" value="🔼" class="editidle"><input type="button" value="🔽" class="editidle"><input type="button" value="❌" class="editidle">
+									</td>
+									<td><label>Label:</label></td>
+									<td><input type="text" id="title" size="10" value="Text Entry"></td>
+								</tr>
+								<tr>
+									<td>
+										<input type="button" value="📝" class="editidle"><input type="button" value="🔼" class="editidle"><input type="button" value="🔽" class="editidle"><input type="button" value="❌" class="editidle">
+									</td>
+									<td><label>Required:</label></td>
+									<td><input type="checkbox" id="required"></td>
+								</tr>
+							</table>
+						</td>
+						
+						<td id="editorpane">
+							
+						</td>
+					</tr>
+				</table>
+				
+				<h3>finished?</h3>
+				<input type="button" value="Generate your file!" onclick="generateXML()">
+			</form>
+			
+			<div id="results" hidden>
+				<h2>myloConfig.xml <a id="downloadmyloconfig" target="_blank" download="myloConfig.xml">[download]</a></h2>
+				<pre id="myloconfig"></pre>
+			</div>
+		</div>
+		
+		<script src="pkg.js"></script>
+	</body>
+</html>

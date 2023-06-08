@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="Copyright 2008 Sony Electronics Inc.">
+<title>World Clock</title>
+
+<!-- mylo Screen Library -->
+<script type="text/javascript" src="/js/lib/WidgetLibrary.js"></script>
+<script type="text/javascript" src="/js/lib/PreferencesLibrary.js"></script>
+<script type="text/javascript" src="/js/lib/ExtensionLibrary.js"></script>
+<!-- mylo Screen Library -->
+
+<script type="text/javascript" src="code.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+	
+<body onLoad="init();">
+
+	<div class="analogclock">
+
+		<div class="cap">
+			<img src="images/cap.png" />
+		</div>
+
+		<div class="mhand">
+		<img id="minutehand" src="images/init.png" />
+		</div>
+
+		<div class="hhand">
+		<img id="hourhand" src="images/init.png" />
+		</div>
+
+
+	<div class="location" id="locationName"></div>
+		<div class="ampm" id="ampm">AM</div>
+	</div>
+
+</body>
+
+</html>
